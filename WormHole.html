@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href = "/Users/MatthewSchley/Documents/EECS/EECS_351/WormHole.css" rel = "stylesheet"></link>
+    <meta charset="utf-8" />
+    <title>WormHole</title>
+  <script>
+function whichButton(event)
+{
+if((event.keyCode)==82){reload();}
+else if((event.keyCode)==68){alert('Welcome to the Wormhole!\n\nClick anywhere on the canvas to stop the wormhole and rectangle pendulum in their tracks.\n\nThe object of the game is to stop the rectangles such that the two smaller rectangles are concealed behind the larger one.\n\nIf you succeed, press the Level++ button to advance to the next stage.\n\nThe levels increase in difficulty! Only the most agile players make it past Level 10!\n\nPress "d" for directions, "r" to reset!')}
+}
+
+</script>
+  </head>
+  <body onload="main()" onkeyup="whichButton(event)">
+    <canvas id="webgl" width="600" height="600">
+    Please use a browser that supports "canvas"
+    </canvas>
+    <element onkeypress="handler">
+    <p>
+      <button type="button" onclick="moreCCW()">LEVEL++</button>
+      <button type="button" onclick="lessCCW()">LEVEL--</button>
+      <button type="button" onclick="alert('Welcome to the Wormhole!\n\nClick anywhere on the canvas to stop the wormhole and rectangle pendulum in their tracks.\n\nThe object of the game is to stop the rectangles such that the two smaller rectangles are concealed behind the larger one.\n\nIf you succeed, press the Level++ button to advance to the next stage.\n\nThe levels increase in difficulty! Only the most agile players make it past Level 10!')">DIRECTIONS</button>
+      <button onclick="openWormHole()">GO INTO WORMHOLE</button>
+      <button onclick="crazy()">HAVE SEIZURE/BREAK MACHINE</button>
+      <button id="reset" onclick="reload()"> RESET</button>
+    </p>
+    <script src="/Users/MatthewSchley/Documents/EECS/EECS_351/examples/lib/webgl-utils.js"></script>
+    <script src="/Users/MatthewSchley/Documents/EECS/EECS_351/examples/lib/webgl-debug.js"></script>
+    <script src="/Users/MatthewSchley/Documents/EECS/EECS_351/examples/lib/cuon-utils.js"></script>
+    <script src="/Users/MatthewSchley/Documents/EECS/EECS_351/examples/lib/cuon-matrix-mod.js"></script>
+    <script src="/Users/MatthewSchley/Documents/EECS/EECS_351/WormHole.js"></script>
+  </body>
+
+</html>
